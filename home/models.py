@@ -1,4 +1,5 @@
 from django.db import models
+from PIL import Image
 class House(models.Model):
     name = models.CharField(max_length=100)
     img = models.ImageField(upload_to='pics')
@@ -9,4 +10,14 @@ class House(models.Model):
     address = models.CharField(max_length=100)
     number = models.CharField(max_length=15)
     qurilgan = models.IntegerField()
+
+
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        img = Image.open(self.image.path)
+    
+
+        output_size = (180, 130)
+        img.thumbnail(output_size)
+        img.save(self.image.path)
     
