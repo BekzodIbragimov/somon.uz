@@ -14,10 +14,10 @@ class House(models.Model):
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
-        img = Image.open(self.image.path)
+        img = Image.open(self.img.path)
     
 
         output_size = (180, 130)
         img.thumbnail(output_size)
-        img.save(self.image.path)
+        img.save(self.img.path)
     
