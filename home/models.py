@@ -22,6 +22,7 @@ class House(models.Model):
         img.save(self.img.path)
 
     
+    
     def __str__(self):
         return self.name
     
