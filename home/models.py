@@ -13,4 +13,3 @@ class House(models.Model):
     qurilgan = models.IntegerField()
     
     
-a
