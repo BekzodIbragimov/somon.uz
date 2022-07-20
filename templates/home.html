@@ -65,6 +65,24 @@
     {% endfor %}
 
 
+<div class="container">
+  <div class="row row-cols-4">
+    {% for house in houses %}
+    <div class="col">
+    <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
+      <img src=" {{house.img.url }} " class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{house.name}}</h5>
+        <p class="card-text"><b>Price</b>$ {{house.price}} <br>
+                            <strong>Location</strong>{{house.viloyat}}<br>
+                             <b>Qurilgan</b>  {{house.qurilgan}}</p>
+        <a href="{% url 'post-detail' korp.id %}" class="btn btn-primary"> More </a>
+      </div>     
+  </div>
+  </div>  
+{% endfor %}
+</div>
+</div>
 
 
 
