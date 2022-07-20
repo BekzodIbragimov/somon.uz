@@ -1,6 +1,4 @@
 from django.db import models
-
-
 class House(models.Model):
     name = models.CharField(max_length=100)
     img = models.ImageField(upload_to='pics')
@@ -11,5 +9,4 @@ class House(models.Model):
     address = models.CharField(max_length=100)
     number = models.CharField(max_length=15)
     qurilgan = models.IntegerField()
-    
     
