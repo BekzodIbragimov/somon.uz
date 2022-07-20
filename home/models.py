@@ -20,4 +20,8 @@ class House(models.Model):
         output_size = (180, 130)
         img.thumbnail(output_size)
         img.save(self.img.path)
+
+    
+    def __str__(self):
+        return self.name
     
