@@ -58,7 +58,7 @@
 <div class="container">
   <div class="row row-cols-4">
     {% for house in houses %}
-    <div class="col ">
+    <div class="col">
     <div class="card shadow p-3 mb-5 bg-white rounded" style="width: 18rem;">
       <img src=" {{house.img.url }} " class="card-img-top " style="height: 10rem" alt="...">
       <div class="card-body">
@@ -67,9 +67,10 @@
                             <strong>Location:</strong> {{house.viloyat}}<br>
                              <b>Qurilgan:</b>  {{house.qurilgan}}</p>
         <a href="" class="btn btn-primary"> More </a>
-      </div>     
+      </div>  
   </div>
-  </div>  
+  </div>
+ 
 {% endfor %}
 </div>
 </div>
