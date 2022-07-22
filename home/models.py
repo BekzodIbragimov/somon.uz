@@ -3,6 +3,7 @@ from PIL import Image
 class House(models.Model):
     name = models.CharField(max_length=100)
     img = models.ImageField(upload_to='pics')
+    xona = models.IntegerField(null=True, blank=True)
     desc = models.TextField()
     price = models.IntegerField()
     viloyat = models.CharField(max_length=100)
