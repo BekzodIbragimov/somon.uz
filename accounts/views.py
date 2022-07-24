@@ -6,7 +6,6 @@ from django.contrib.auth.models import User, auth
 
 
 def register(request):
-
     if request.method == 'POST':
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
