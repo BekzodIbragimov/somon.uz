@@ -58,13 +58,24 @@
 
 
 
-
-
-
-
-
-
-
+  <div class="card shadow p-3 mb-5 bg-white rounded" style="max-width: 1000px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{postid.img.url}}" class="card-img-top " alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{postid.name}}</h5>
+          <p class="card-text">{{postid.desc}}</p>
+          <p class="card-text"><strong>Xonalar soni: </strong>{{postid.xona}}</p>
+          <p class="card-text"><strong>Joylashgan: </strong>{{postid.viloyat}}, {{postid.tuman}}, {{postid.address}}</p>
+          <p class="card-text"><strong>Qurilgan: </strong>{{postid.qurilgan}}</p>
+          <p class="card-text"><strong>Telefon raqam: </strong>{{postid.number}}</p>
+          <h3>${{postid.price}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
