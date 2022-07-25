@@ -1,0 +1,90 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Somon.uz</title>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{% url 'home'%}">Somon</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarScroll">
+    <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Registration
+        </a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="accounts/register">Register</a></li>
+          <li><a class="dropdown-item" href="accounts/login">Login</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="#">LogOut</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Link</a>
+      </li>
+    </ul>
+    <form class="d-flex">
+      <input class="form-control mr-2" type="search" placeholder="Find home" aria-label="Search">
+      <button class="btn btn-secondary" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+  <div class="card shadow p-3 mb-5 bg-white rounded" style="max-width: 1000px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="{{postid.img.url}}" class="card-img-top " alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{postid.name}}</h5>
+          <p class="card-text">{{postid.desc}}</p>
+          <p class="card-text"><strong>Xonalar soni: </strong>{{postid.xona}}</p>
+          <p class="card-text"><strong>Joylashgan: </strong>{{postid.viloyat}}, {{postid.tuman}}, {{postid.address}}</p>
+          <p class="card-text"><strong>Qurilgan: </strong>{{postid.qurilgan}}</p>
+          <p class="card-text"><strong>Telefon raqam: </strong>{{postid.number}}</p>
+          <h3>${{postid.price}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
