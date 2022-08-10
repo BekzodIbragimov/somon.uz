@@ -10,9 +10,9 @@ def home(request):
 def search_house(request):
     
     if request.method == 'POST':
-    
         searched = request.POST['searched']
-        return render(request, 'search.html', {'searched':searched})
+        houses = House.objects.filter(name__contains=searched)
+        return render(request, 'search.html', {'searched':searched, 'houses':houses})
     else:
         return render(request, 'search.html')
 
